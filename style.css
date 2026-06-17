@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    min-height: 100vh;
+}
+
+/* Heading */
+h1 {
+    background-color: #081b31;
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Choices Container */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+/* Choice Circle */
+.choice {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Effect */
+.choice:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.choice:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* Hover Effect */
+.choice:hover {
+    background-color: #081b31;
+    transform: scale(1.1) rotate(8deg);
+    box-shadow: 0 0 25px rgba(8, 27, 49, 0.4);
+}
+
+/* Images */
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.choice:hover img {
+    transform: scale(1.05);
+}
+
+/* Score Board */
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 4rem;
+}
+
+.score {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+#user-score,
+#comp-score {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #081b31;
+    transition: transform 0.2s ease;
+}
+
+/* Message */
+.msg-container {
+    margin-top: 4rem;
+}
+
+#msg {
+    background-color: #081b31;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Reset Button */
+#reset-btn {
+    margin-top: 2rem;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #081b31;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#reset-btn:hover {
+    transform: scale(1.05);
+    background-color: #10355d;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .choices {
+        gap: 1.5rem;
+    }
+
+    .choice {
+        height: 140px;
+        width: 140px;
+    }
+
+    img {
+        height: 125px;
+        width: 125px;
+    }
+
+    .score-board {
+        gap: 2rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .choices {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
