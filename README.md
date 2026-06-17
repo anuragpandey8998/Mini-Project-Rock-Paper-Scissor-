@@ -58,7 +58,7 @@ Through this project, I strengthened my understanding of:
 
 ## 🌐 Live Demo
 
-**Live Demo:** Add your deployed project link here
+**Live Demo:** : https://anuragpandey8998.github.io/Mini-Project-Rock-Paper-Scissor-/
 
 ## 📸 Preview
 
